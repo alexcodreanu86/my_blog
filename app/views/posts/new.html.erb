@@ -1,0 +1,8 @@
+<h1>Welcome to the new post form.</h1>
+<%= form_for @post do |f| %>
+  <%= f.label :title %>:<br>
+  <%= f.text_field  :title, placeholder: "Bananas are evil" %><br>
+  <%= f.label :text%>:<br>
+  <%= f.text_area  :text,rows: 10, cols: 40, placeholder: "Why do I thing bananas are evile? Well ..." %><br>
+  <%= f.submit %>
+<% end %>

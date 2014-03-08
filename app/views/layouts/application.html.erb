@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<%= link_to "Home", root_path %>
+<%= link_to "Sign up", new_user_registration_path %>
+<% if current_user %>
+  <%= link_to "Sign out", destroy_user_session_path,  method: "DELETE"%>
+<% else %> 
+  <%= link_to "Sign in", new_user_session_path %>
+<% end %>
+  
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p> 
+
+<%= yield %>
+
+<% if current_user %>
+  <%= link_to "Create Post", new_post_path %>
+  <%= link_to "View Posts", posts_path %>
+<% end %>
+
+</body>
+</html>
