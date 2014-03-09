@@ -5,7 +5,7 @@ Devise.setup do |config|
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
   config.secret_key = '568dc2832259a2e72eb5971a5e9284e53da967dd1c01d140af41ecdbe1aab07af828598630690b314ac38dd9d371942a2c92693f07da7d669093a7b1c565c034'
-  
+
   # config.secret_key = 'd7ab42cd045f7307245f559d0d9e1e7aeac92cf972b329c3c206c572187fdcbd2f92c71caa461c229117291f47feb65b8b82084e0c33c4830a5ab1ee49c1eb72'
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
@@ -223,7 +223,7 @@ Devise.setup do |config|
   # config.navigational_formats = ['*/*', :html]
 
   # The default HTTP method used to sign out a resource. Default is :delete.
-  config.sign_out_via = :delete
+  config.sign_out_via = :get
 
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
